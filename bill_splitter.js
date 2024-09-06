@@ -28,13 +28,15 @@ function calculate_Tip(bill_amount){
     
 // Utilize Arrays
 
-    let bills = [275,40,430]            
-    let tips = bills.map(calculate_Tip);
+    let bills = [275,40,430];           
+    let tips = bills.map(bill => calculate_Tip(bill));
     let total_Amount = bills.map((bill, index) => bill + tips[index]);
 
     console.log("bills",bills);
     console.log("tips",tips);
     console.log("total per bill",total_Amount);
+
+
     
     
 
