@@ -12,10 +12,10 @@ console.log(`The bill was ${bill}, the tip was ${tip}, and the total value is ${
 
 function calculate_Tip(bill_amount){
     let tippercentage;
-    
+ 
     if(bill_amount < 50)
         tippercentage = 0.2;
-    else if(bill_amount <= 300 && bill_amount >= 50) 
+    else if(bill_amount <= 300 && bill_amount >= 50)  // Using if esle if statements proved to be easier than ? //
         tippercentage = 0.15;
     else 
     tippercentage = 0.2;
@@ -26,9 +26,16 @@ function calculate_Tip(bill_amount){
     let Tip = calculate_Tip(bill)
     console.log(`Tip for ${bill_amount} bill is ${Tip}`)
     
+// Utilize Arrays
 
+    let bills = [275,40,430]            
+    let tips = bills.map(calculate_Tip);
+    let total_Amount = bills.map((bill, index) => bill + tips[index]);
+
+    console.log("bills",bills);
+    console.log("tips",tips);
+    console.log("total per bill",total_Amount);
     
-
     
 
 
